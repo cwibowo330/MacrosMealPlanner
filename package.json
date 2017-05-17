@@ -8,7 +8,7 @@
     	"startapp": "node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest"
 	},
-	"dependencies": {
+	"dependencies": { 
 		"react": "16.0.0-alpha.6",
 		"react-native": "0.44.0",
 		"react-dom": "^15.5.4",
