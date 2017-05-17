@@ -1,3 +1,5 @@
+MERGE THIS WITH package.json in the root so that you only have 1 package.json file
+
 {
   "name": "web",
   "version": "1.0.0",
