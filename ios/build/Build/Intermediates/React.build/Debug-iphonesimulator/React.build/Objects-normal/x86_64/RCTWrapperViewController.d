@@ -1,18 +1,18 @@
 dependencies: \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Views/RCTWrapperViewController.m \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Views/RCTWrapperViewController.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Views/RCTViewControllerProtocol.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Base/RCTEventDispatcher.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Base/RCTBridge.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Base/RCTBridgeModule.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Base/RCTFrameUpdate.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Base/RCTInvalidating.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Views/RCTNavItem.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Views/RCTComponent.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Base/RCTUtils.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Views/UIView+React.h \
-  /Users/imjny/MacrosMealPlanner/node_modules/react-native/React/Views/RCTAutoInsetsProtocol.h
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Views/RCTWrapperViewController.m \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Views/RCTWrapperViewController.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Views/RCTViewControllerProtocol.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Views/RCTNavItem.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/aaroncraig/dev/MacrosMealPlanner/node_modules/react-native/React/Views/RCTAutoInsetsProtocol.h

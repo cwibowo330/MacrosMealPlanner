@@ -29,11 +29,11 @@ module.exports = {
         loader: 'url-loader',
         query:  { name: '[name].[hash:16].[ext]' },
       },
-      {
-        test:    /\.ttf$/,
-        loader:  'file-loader',
-        include: path.join(__dirname, iconModulePath),
-      },
+      // {
+      //   test:    /\.ttf$/,
+      //   loader:  'file-loader',
+      //   include: path.join(__dirname, iconModulePath),
+      // },
     ],
   },
   output: {
