@@ -14,4 +14,4 @@ const StyledText = (props) => (
   </Text>
 );
 
-export StyledText;
+export default StyledText;
