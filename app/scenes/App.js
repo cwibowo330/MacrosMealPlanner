@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import StyledText from '../components/StyledText';
+import Nav from '../components/Nav';
+import UserInfo from '../components/UserInfo';
+import MacrosModule from '../components/MacrosModule';
 
 export default class App extends Component {
   render() {
     return (
       <View>
-        <StyledText>
-          Welcome to React Native Web!
-        </StyledText>
-        <StyledText>
-          Welcome to React Native Web!
-        </StyledText>
+        <Nav />
+        <UserInfo />
+        <MacrosModule title="proteins"/>
+        <MacrosModule title="fats"/>
+        <MacrosModule title="carbs"/>
       </View>
     );
   }
