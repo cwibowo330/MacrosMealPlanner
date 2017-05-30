@@ -1,45 +1,52 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Colors from './Colors';
+import StyledText from './StyledText';
 
+// https://facebook.github.io/react-native/releases/0.45/docs/flexbox.html
 const navStyles = StyleSheet.create({
 	wrap: {
-      fontFamily: 'Arial',
-      fontSize: '12px',
-      textTransform: 'uppercase',
-      backgroundColor: Colors.grey,
-      width: '100%',
-      display: 'inline',
-      padding: '10px',
-      fontWeight: '500',
-      color: '#e3e3e3'
-    },
-    base: {
-      display: 'inline-block',
-      verticalAlign : 'top',
-      color: 'white',
-      fontWeight: '600'
-    }
+    backgroundColor: Colors.grey,
+    flex: 1,
+    flexDirection: 'row',
+    padding: '10px',
+  },
 });
+
 const Nav = (props) => (
   <View style={navStyles.wrap}>
-  	<Text style={navStyles.base} style={{
-      width: '40%',
-    }}>
-    	Macros Meal Planner
-  	</Text>
-  	<Text style={navStyles.base}  style={{
-      width: '37%'
-    }}>
-    	Groceries
-  	</Text>
-  	<Text style={navStyles.base}  style={{
-      width: '20%'
-    }}>
-    	Log Out
-  	</Text>
+    <View
+      style={{ flex: 10 }}
+    >
+    	<StyledText
+        type="nav"
+        onPress={() => console.log('meal planner') }
+      >
+      	Macro Meal Planner
+    	</StyledText>
+    </View>
+    <View
+      style={{ flex: 10 }}
+    >
+    	<StyledText
+        type="nav"
+        onPress={() => console.log('groceries') }
+      >
+      	Groceries
+    	</StyledText>
+    </View>
+    <View
+      style={{ flex: 1, alignItems: 'flex-end' }}
+    >
+    	<StyledText
+        type="nav"
+        onPress={() => console.log('logout') }
+      >
+      	Log Out
+    	</StyledText>
+    </View>
   </View>
-  
+
 );
 
 export default Nav;
