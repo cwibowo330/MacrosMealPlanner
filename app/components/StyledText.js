@@ -16,8 +16,32 @@ const styles = StyleSheet.create({
     ...baseStyle,
     color: Colors.white,
     fontWeight: '600',
+    flex: 1,
+    width: '200px',
+    flexShrink: '1',
+    padding: '5px',
     textTransform: 'uppercase',
-  }
+  },
+  title: {
+      display: 'inline-block',
+      verticalAlign : 'top',
+      marginTop: '20px',
+      textTransform: 'uppercase',
+      fontSize: '25px',
+      color: 'Colors.grey',
+      fontWeight: '600',
+      paddingRight: '20px',
+      flexShrink: '1',
+      flex: '1',
+  },
+  infoSubtitle: {
+      fontFamily: 'Arial',
+      fontSize: '11px',
+      textTransform: 'uppercase',
+      fontWeight: '500',
+      flex: '1',
+      marginTop: '10px',
+    }
 });
 
 const StyledText = ({ children, type, onPress }) => (
@@ -36,7 +60,7 @@ StyledText.defaultProps = {
 
 StyledText.propTypes = {
   children: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['nav', 'standard']),
+  type: PropTypes.oneOf(['nav', 'standard','title','infoSubtitle']),
   onPress: PropTypes.func,
 };
 
