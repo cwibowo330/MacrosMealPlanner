@@ -37,10 +37,7 @@ const MacrosCard = (props) => (
       <Text style={cardStyles.macroInfo}>F: 120G</Text>
       <Text style={cardStyles.macroInfo}>C: 120G</Text>
     </View>
-    <Image
-      style={cardStyles.image}
-      source={{uri: 'http://www.mansfieldgolfclub.com.au/wp-content/uploads/2016/05/steak-2-200x200.jpg'}}
-    />
+    <Image style={cardStyles.image} source={{ uri: 'http://www.mansfieldgolfclub.com.au/wp-content/uploads/2016/05/steak-2-200x200.jpg'}} />
     <Text style={cardStyles.desc}>Macro Description</Text>
     <View style={cardStyles.countWrap}>
   		<Text style={cardStyles.count}>-</Text>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, TextInput, StyleSheet } from 'react-native';
-import Colors from './Colors';
 
 const rangeStyles = StyleSheet.create({
   wrap: {display: 'inline'},
@@ -25,5 +24,6 @@ const MacrosRangeSlider = (props) => (
     </View>
   </View>
 );
+
 
 export default MacrosRangeSlider;

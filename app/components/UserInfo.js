@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, TextInput, StyleSheet } from 'react-native';
-import Colors from './Colors';
 import MacrosRangeSlider from './MacrosRangeSlider';
 
 const userStyles = StyleSheet.create({
@@ -36,24 +35,23 @@ const userStyles = StyleSheet.create({
       }
 });
 
-const UserInfo = (props) => (
+const UserInfo = () => (
   <View style={userStyles.wrap}>
     <View style={userStyles.welcome}>
       <Text>Welcome Name</Text>
     </View>
     <View style={userStyles.dataWrap}>
       <Text>Calories Per Day</Text>
-      <TextInput style={userStyles.input}/>
+      <TextInput style={userStyles.input} />
     </View>
     <View style={userStyles.dataWrap}>
       <Text>Days To Meal Plan</Text>
-      <TextInput style={userStyles.input}/>
+      <TextInput style={userStyles.input} />
     </View>
-    <MacrosRangeSlider title="protein" grams="140"/>
-    <MacrosRangeSlider title="fats" grams="120"/>
-    <MacrosRangeSlider title="carbs" grams="40"/>
+    <MacrosRangeSlider title="protein" grams="140" />
+    <MacrosRangeSlider title="fats" grams="120" />
+    <MacrosRangeSlider title="carbs" grams="40" />
   </View>
-  
 );
 
 export default UserInfo;
