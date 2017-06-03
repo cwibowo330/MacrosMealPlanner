@@ -4,8 +4,15 @@ import Colors from './Colors';
 
 const baseStyle = {
     fontFamily: 'Arial',
-    fontSize: '12px',
+    fontSize: '14px',
+    textTransform: 'uppercase',
 };
+
+const subTitleBase = {
+    fontSize: '11px',
+    fontWeight: '500',
+    textTransform: 'uppercase',
+}
 
 const styles = StyleSheet.create({
   standard: {
@@ -20,28 +27,58 @@ const styles = StyleSheet.create({
     width: '200px',
     flexShrink: '1',
     padding: '5px',
-    textTransform: 'uppercase',
   },
   title: {
-      display: 'inline-block',
+      ...baseStyle,
       verticalAlign : 'top',
       marginTop: '20px',
-      textTransform: 'uppercase',
-      fontSize: '25px',
+      fontSize: '35px',
       color: 'Colors.grey',
       fontWeight: '600',
       paddingRight: '20px',
       flexShrink: '1',
-      flex: '1',
   },
   infoSubtitle: {
-      fontFamily: 'Arial',
-      fontSize: '11px',
-      textTransform: 'uppercase',
-      fontWeight: '500',
-      flex: '1',
+      ...subTitleBase,
       marginTop: '10px',
-    }
+  },
+  macrosInfoSubtitle: {
+      ...subTitleBase,
+  },
+  macrosTitle: {
+    ...baseStyle,
+    marginTop: '20px',
+    fontSize: '24px',
+    fontWeight: '600',
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'center',
+  },
+  count: {
+    borderRadius: '13px', 
+    height: '26px', 
+    width: '26px', 
+    backgroundColor: '#333', 
+    color: '#fff', 
+    textAlign: 'center', 
+    fontSize: '21px',
+  },
+  countNum: {
+    paddingLeft: '10px',
+    paddingRight: '10px',
+    paddingTop: '5px',
+  },
+  macroDesc: {
+    display: 'block', 
+    fontSize: '12px', 
+    padding: '10px', 
+    textTransform: 'uppercase', 
+    textAlign: 'center'
+  },
+  macroInfo: {
+    paddingTop: '3px', 
+    paddingRight: '3px'
+  },
 });
 
 const StyledText = ({ children, type, onPress }) => (
@@ -60,7 +97,15 @@ StyledText.defaultProps = {
 
 StyledText.propTypes = {
   children: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['nav', 'standard','title','infoSubtitle']),
+  type: PropTypes.oneOf([
+    'nav', 
+    'standard',
+    'title',
+    'infoSubtitle', 
+    'macrosInfoSubtitle', 
+    'count', 
+    'countNum', 
+    'macroDesc']),
   onPress: PropTypes.func,
 };
 

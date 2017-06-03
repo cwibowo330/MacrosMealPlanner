@@ -1,24 +1,14 @@
 import React from 'react';
-import { Text, View, TextInput, StyleSheet } from 'react-native';
+import { View, TextInput } from 'react-native';
 import Colors from './Colors';
 import MacrosCard from './MacrosCard';
-const moduleStyles = StyleSheet.create({
-  moduleWrap: {
-    display: 'inline', marginTop: '30px'
-  },
-  moduleTitle: {
-    display: 'block', marginLeft: '10px', textTransform: 'uppercase', fontSize: '14px', fontWeight: '600'
-  },
-  cardWrap: {
-    display: 'inline', width: '100%'
-  }
-});
+import StyledText from './StyledText';
 
 
 const MacrosModule = (props) => (
-  <View style={moduleStyles.moduleWrap}>
-    <Text style={moduleStyles.moduleTitle}>{props.title}</Text>
-      <View style={moduleStyles.cardWrap}>
+  <View style={{ marginTop: '10px' }}>
+    <StyledText type="macrosTitle">{props.title}</StyledText>
+      <View style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'space-around' }}>
         <MacrosCard />
         <MacrosCard />
         <MacrosCard />

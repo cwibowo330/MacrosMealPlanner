@@ -1,27 +1,22 @@
 import React from 'react';
-import { Text, View, TextInput, StyleSheet } from 'react-native';
+import { View, TextInput, StyleSheet } from 'react-native';
+import StyledText from './StyledText';
 
 const rangeStyles = StyleSheet.create({
-  wrap: {display: 'inline'},
   input: {
       border: '1px solid #333',
       padding: '5px',
       marginTop: '7px',
-      textAlign: 'right',
+      textAlign: 'center',
       fontSize: '10px',
-      display: 'block'
+      width: '200px',
   },
-  container: {display: 'inline-block', width: '30%', fontSize: '10px', marginTop: '30px'},
-  grams: {paddingLeft: '10px'}
 });
 
 const MacrosRangeSlider = (props) => (
-  <View style={rangeStyles.wrap}>
-    <View style={rangeStyles.container}>
-      <Text>{props.title}</Text>
-      <Text style={rangeStyles.grams}>{props.grams}</Text>
+  <View style={{ flex: '1', alignItems: 'center', marginTop: '10px', width: '200px' }}>
+      <StyledText type="macrosInfoSubtitle">{props.title} - {props.grams}G</StyledText>
       <TextInput style={rangeStyles.input}/>
-    </View>
   </View>
 );
 
