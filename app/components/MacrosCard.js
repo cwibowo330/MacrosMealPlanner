@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
+import Colors from './Colors';
 import StyledText from './StyledText';
 
 const cardStyles = StyleSheet.create({
   info: {
-    backgroundColor: '#e60000',
+    backgroundColor: Colors.red,
     width:           '50px',
     height:          '55px',
     position:        'absolute',
