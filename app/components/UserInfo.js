@@ -5,10 +5,10 @@ import UserMealPlanInput from './UserMealPlanInput';
 
 const userStyles = StyleSheet.create({
   flexWrap: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    marginTop: '20px',
+    display:        'flex',
+    flexWrap:       'wrap',
+    flexDirection:  'row',
+    marginTop:      '20px',
     justifyContent: 'space-around',
   },
 });

@@ -3,17 +3,16 @@ import { Text, StyleSheet } from 'react-native';
 import Colors from './Colors';
 
 const baseStyle = {
-    fontFamily: 'Arial',
-    fontSize: '14px',
-    textTransform: 'uppercase',
+  fontFamily:    'Arial',
+  fontSize:      '14px',
+  textTransform: 'uppercase',
 };
 
 const subTitleBase = {
-    fontSize: '11px',
-    fontWeight: '500',
-    textTransform: 'uppercase',
-    fontWeight: '600',
-}
+  fontSize:      '11px',
+  textTransform: 'uppercase',
+  fontWeight:    '600',
+};
 
 const styles = StyleSheet.create({
   standard: {
@@ -22,62 +21,62 @@ const styles = StyleSheet.create({
   },
   nav: {
     ...baseStyle,
-    color: Colors.white,
+    color:      Colors.white,
     fontWeight: '600',
-    flex: 1,
-    width: '200px',
+    flex:       '1',
+    width:      '200px',
     flexShrink: '1',
-    padding: '5px',
+    padding:    '5px',
   },
   title: {
-      ...baseStyle,
-      verticalAlign : 'top',
-      marginTop: '20px',
-      fontSize: '35px',
-      color: 'Colors.grey',
-      fontWeight: '600',
-      paddingRight: '20px',
-      flexShrink: '1',
+    ...baseStyle,
+    verticalAlign: 'top',
+    marginTop:     '20px',
+    fontSize:      '35px',
+    color:         'Colors.grey',
+    fontWeight:    '600',
+    paddingRight:  '20px',
+    flexShrink:    '1',
   },
   infoSubtitle: {
-      ...subTitleBase,
-      marginTop: '10px',
+    ...subTitleBase,
+    marginTop: '10px',
   },
   macrosInfoSubtitle: {
-      ...subTitleBase,
+    ...subTitleBase,
   },
   macrosTitle: {
     ...baseStyle,
-    marginTop: '20px',
-    fontSize: '24px',
-    fontWeight: '600',
-    display: 'flex',
-    flex: 1,
+    marginTop:      '20px',
+    fontSize:       '24px',
+    fontWeight:     '600',
+    display:        'flex',
+    flex:           '1',
     justifyContent: 'center',
   },
   count: {
-    borderRadius: '13px',
-    height: '26px',
-    width: '26px',
+    borderRadius:    '13px',
+    height:          '26px',
+    width:           '26px',
     backgroundColor: '#333',
-    color: '#fff',
-    textAlign: 'center',
-    fontSize: '21px',
+    color:           '#fff',
+    textAlign:       'center',
+    fontSize:        '21px',
   },
   countNum: {
-    paddingLeft: '10px',
+    paddingLeft:  '10px',
     paddingRight: '10px',
-    paddingTop: '5px',
+    paddingTop:   '5px',
   },
   macroDesc: {
-    display: 'block',
-    fontSize: '12px',
-    padding: '10px',
+    display:       'block',
+    fontSize:      '12px',
+    padding:       '10px',
     textTransform: 'uppercase',
-    textAlign: 'center',
+    textAlign:     'center',
   },
   macroInfo: {
-    paddingTop: '3px',
+    paddingTop:   '3px',
     paddingRight: '3px',
   },
 });
@@ -93,12 +92,12 @@ const StyledText = ({ children, type, onPress }) => (
 
 StyledText.defaultProps = {
   onPress: null,
-  type: 'standard',
+  type:    'standard',
 };
 
 StyledText.propTypes = {
   children: PropTypes.string.isRequired,
-  type: PropTypes.oneOf([
+  type:     PropTypes.oneOf([
     'nav',
     'standard',
     'title',

@@ -5,13 +5,13 @@ import StyledText from './StyledText';
 
 // https://facebook.github.io/react-native/releases/0.45/docs/flexbox.html
 const navStyles = StyleSheet.create({
-    wrap: {
-      backgroundColor: Colors.grey,
-      display: 'flex',
-      flexWrap: 'wrap',
-      padding: '10px',
-      flexDirection: 'row',
-    },
+  wrap: {
+    backgroundColor: Colors.grey,
+    display:         'flex',
+    flexWrap:        'wrap',
+    padding:         '10px',
+    flexDirection:   'row',
+  },
 });
 
 const Nav = () => (
