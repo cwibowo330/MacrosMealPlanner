@@ -12,6 +12,7 @@ const subTitleBase = {
     fontSize: '11px',
     fontWeight: '500',
     textTransform: 'uppercase',
+    fontWeight: '600',
 }
 
 const styles = StyleSheet.create({
@@ -55,12 +56,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   count: {
-    borderRadius: '13px', 
-    height: '26px', 
-    width: '26px', 
-    backgroundColor: '#333', 
-    color: '#fff', 
-    textAlign: 'center', 
+    borderRadius: '13px',
+    height: '26px',
+    width: '26px',
+    backgroundColor: '#333',
+    color: '#fff',
+    textAlign: 'center',
     fontSize: '21px',
   },
   countNum: {
@@ -69,15 +70,15 @@ const styles = StyleSheet.create({
     paddingTop: '5px',
   },
   macroDesc: {
-    display: 'block', 
-    fontSize: '12px', 
-    padding: '10px', 
-    textTransform: 'uppercase', 
-    textAlign: 'center'
+    display: 'block',
+    fontSize: '12px',
+    padding: '10px',
+    textTransform: 'uppercase',
+    textAlign: 'center',
   },
   macroInfo: {
-    paddingTop: '3px', 
-    paddingRight: '3px'
+    paddingTop: '3px',
+    paddingRight: '3px',
   },
 });
 
@@ -98,14 +99,15 @@ StyledText.defaultProps = {
 StyledText.propTypes = {
   children: PropTypes.string.isRequired,
   type: PropTypes.oneOf([
-    'nav', 
+    'nav',
     'standard',
     'title',
-    'infoSubtitle', 
-    'macrosInfoSubtitle', 
-    'count', 
-    'countNum', 
-    'macroDesc']),
+    'infoSubtitle',
+    'macrosInfoSubtitle',
+    'count',
+    'countNum',
+    'macroDesc',
+  ]),
   onPress: PropTypes.func,
 };
 

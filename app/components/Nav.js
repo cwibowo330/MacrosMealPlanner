@@ -16,21 +16,21 @@ const navStyles = StyleSheet.create({
 
 const Nav = () => (
   <View style={navStyles.wrap}>
-      <View style={{ flex: 10 }}>
-       <StyledText type="nav" onPress={() => console.log('meal planner')}>
-         Macro Meal Planner
-       </StyledText>
-      </View>
-      <View style={{ flex: 10 }}>
-       <StyledText type="nav" onPress={() => console.log('groceries')}>
-         Groceries
-       </StyledText>
-      </View>
-      <View style={{ flex: 1 }}>
-       <StyledText type="nav" onPress={() => console.log('logout')}>
-         Log Out
-       </StyledText>
-      </View>
+    <View style={{ flex: 10 }}>
+      <StyledText type="nav" onPress={() => console.log('meal planner')}>
+       Macro Meal Planner
+     </StyledText>
+    </View>
+    <View style={{ flex: 10 }}>
+      <StyledText type="nav" onPress={() => console.log('groceries')}>
+       Groceries
+     </StyledText>
+    </View>
+    <View style={{ flex: 1 }}>
+      <StyledText type="nav" onPress={() => console.log('logout')}>
+       Log Out
+     </StyledText>
+    </View>
   </View>
 
 );
