@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import UserMealPlanInput from './UserMealPlanInput';
+import StyledText from './StyledText';
 import LabeledInput from './LabeledInput';
 
 const userStyles = StyleSheet.create({
@@ -15,7 +15,15 @@ const userStyles = StyleSheet.create({
 
 const UserInfo = () => (
   <View>
-    <UserMealPlanInput />
+    <View style={userStyles.flexWrap}>
+      <View style={{ flex: '1', marginLeft: '10px' }}>
+        <StyledText type="title">Welcome <br />Name</StyledText>
+      </View>
+      <View style={{ flex: '2', marginLeft: '10px' }}>
+        <LabeledInput textStyle="infoSubtitle" type="userInput" title="Calories Per Day" />
+        <LabeledInput textStyle="infoSubtitle" type="userInput" title="Days of Meal Planning" />
+      </View>
+    </View>
     <View style={userStyles.flexWrap}>
       <LabeledInput textStyle="macrosInfoSubtitle" title="protein" grams="140" />
       <LabeledInput textStyle="macrosInfoSubtitle" title="fats" grams="120" />
