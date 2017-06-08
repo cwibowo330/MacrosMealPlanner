@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
   },
   macrosInfoSubtitle: {
     ...subTitleBase,
+    textAlign: 'center',
   },
   macrosTitle: {
     ...baseStyle,

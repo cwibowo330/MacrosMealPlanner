@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import StyledText from './StyledText';
-import StyledInput from './StyledInput';
+import LabeledInput from './LabeledInput';
 
 const UserMealPlan = StyleSheet.create({
   flexWrap: {
@@ -19,10 +19,8 @@ const UserMealPlanInput = () => (
       <StyledText type="title">Welcome <br />Name</StyledText>
     </View>
     <View style={{ flex: '2', marginLeft: '10px' }}>
-      <StyledText type="infoSubtitle">Calories Per Day</StyledText>
-      <StyledInput type="userInput" />
-      <StyledText type="infoSubtitle">Days To Meal Plan</StyledText>
-      <StyledInput type="userInput" />
+      <LabeledInput textStyle="infoSubtitle" type="userInput" title="Calories Per Day" />
+      <LabeledInput textStyle="infoSubtitle" type="userInput" title="Days of Meal Planning" />
     </View>
   </View>
 );
