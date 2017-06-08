@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import StyledText from './StyledText';
 import LabeledInput from './LabeledInput';
 
-const userStyles = StyleSheet.create({
+const userInfoStyles = StyleSheet.create({
   flexWrap: {
     display:        'flex',
     flexWrap:       'wrap',
@@ -15,7 +15,7 @@ const userStyles = StyleSheet.create({
 
 const UserInfo = () => (
   <View>
-    <View style={userStyles.flexWrap}>
+    <View style={userInfoStyles.flexWrap}>
       <View style={{ flex: '1', marginLeft: '10px' }}>
         <StyledText type="title">Welcome <br />Name</StyledText>
       </View>
@@ -24,7 +24,7 @@ const UserInfo = () => (
         <LabeledInput textStyle="infoSubtitle" type="userInput" title="Days of Meal Planning" />
       </View>
     </View>
-    <View style={userStyles.flexWrap}>
+    <View style={userInfoStyles.flexWrap}>
       <LabeledInput textStyle="macrosInfoSubtitle" title="protein" grams="140" />
       <LabeledInput textStyle="macrosInfoSubtitle" title="fats" grams="120" />
       <LabeledInput textStyle="macrosInfoSubtitle" title="carbs" grams="40" />

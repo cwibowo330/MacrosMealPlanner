@@ -6,7 +6,7 @@ import StyledText from './StyledText';
 
 const MacrosModule = props => (
   <View style={{ marginTop: '10px' }}>
-    <StyledText type="macrosTitle">{props.title}</StyledText>
+    <StyledText type="macrosTitle">{props.title} 0%</StyledText>
     <View style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'space-around' }}>
       <MacrosCard />
       <MacrosCard />
