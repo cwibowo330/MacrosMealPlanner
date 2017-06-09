@@ -14,20 +14,20 @@ const userInfoStyles = StyleSheet.create({
 });
 
 const UserInfo = () => (
-  <View>
+  <View onChange={e => console.log(e.target.value)}>
     <View style={userInfoStyles.flexWrap}>
       <View style={{ flex: '1', marginLeft: '10px' }}>
         <StyledText type="title">Welcome <br />Name</StyledText>
       </View>
       <View style={{ flex: '2', marginLeft: '10px' }}>
-        <LabeledInput textStyle="infoSubtitle" type="userInput" title="Calories Per Day" />
-        <LabeledInput textStyle="infoSubtitle" type="userInput" title="Days of Meal Planning" />
+        <LabeledInput name="caloriesAmount" textStyle="infoSubtitle" type="userInput" title="Calories Per Day" />
+        <LabeledInput name="mealPlanningDays" textStyle="infoSubtitle" type="userInput" title="Days of Meal Planning" />
       </View>
     </View>
     <View style={userInfoStyles.flexWrap}>
-      <LabeledInput textStyle="macrosInfoSubtitle" title="protein" grams="140" />
-      <LabeledInput textStyle="macrosInfoSubtitle" title="fats" grams="120" />
-      <LabeledInput textStyle="macrosInfoSubtitle" title="carbs" grams="40" />
+      <LabeledInput name="proteinsPercent" textStyle="macrosInfoSubtitle" title="protein" grams="140" />
+      <LabeledInput name="fatsPercent" textStyle="macrosInfoSubtitle" title="fats" grams="120" />
+      <LabeledInput name="carbsPercent" textStyle="macrosInfoSubtitle" title="carbs" grams="40" />
     </View>
   </View>
 );
