@@ -26,32 +26,32 @@ const styles = StyleSheet.create({
   },
 });
 
-const LabeledInput = ({ title, grams, textStyle, children, type, onPress }) => (
+const LabeledInput = ({ value, title, textStyle, type, onChange }) => (
   <View>
-    <StyledText type={textStyle}>{title} {grams}</StyledText>
+    <StyledText type={textStyle}>{title}</StyledText>
     <TextInput
+      value={value}
       style={styles[type]}
-      onPress={onPress}
-    >
-    </TextInput>
+      onChange={onChange}
+    />
   </View>
 );
 
 LabeledInput.defaultProps = {
-  onPress: null,
-  type:    'standard',
+  onChange: null,
+  type:     'standard',
+  value:    '',
 };
 
 LabeledInput.propTypes = {
-  children:  PropTypes.string.isRequired,
   title:     PropTypes.string.isRequired,
-  grams:     PropTypes.string.isRequired,
   textStyle: PropTypes.string.isRequired,
+  value:     PropTypes.string,
   type:      PropTypes.oneOf([
     'userInput',
     'standard',
   ]),
-  onPress: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 export default LabeledInput;
