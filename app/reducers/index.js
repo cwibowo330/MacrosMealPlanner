@@ -22,43 +22,28 @@ function reducer(state = initialState, action) {
 
   if (action.type === UPDATE_CALORIES) {
     stateCopy.macros = {
+      ...state.macros,
       calories: action.calories,
-      days:     state.macros.days,
-      proteins: state.macros.proteins,
-      fats:     state.macros.fats,
-      carbs:    state.macros.carbs,
     };
   } else if (action.type === UPDATE_DAYS) {
     stateCopy.macros = {
-      calories: state.macros.calories,
-      days:     action.days,
-      proteins: state.macros.proteins,
-      fats:     state.macros.fats,
-      carbs:    state.macros.carbs,
+      ...state.macros,
+      days: action.days,
     };
   } else if (action.type === UPDATE_PROTEINS) {
     stateCopy.macros = {
-      calories: state.macros.calories,
-      days:     state.macros.days,
+      ...state.macros,
       proteins: action.proteins,
-      fats:     state.macros.fats,
-      carbs:    state.macros.carbs,
     };
   } else if (action.type === UPDATE_FATS) {
     stateCopy.macros = {
-      calories: state.macros.calories,
-      days:     state.macros.days,
-      proteins: state.macros.proteins,
-      fats:     action.fats,
-      carbs:    state.macros.carbs,
+      ...state.macros,
+      fats: action.fats,
     };
   } else if (action.type === UPDATE_CARBS) {
     stateCopy.macros = {
-      calories: state.macros.calories,
-      days:     state.macros.days,
-      proteins: state.macros.proteins,
-      fats:     state.macros.fats,
-      carbs:    action.carbs,
+      ...state.macros,
+      carbs: action.carbs,
     };
   }
 
