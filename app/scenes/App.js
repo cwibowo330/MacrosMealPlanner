@@ -1,9 +1,9 @@
 import React from 'react';
-// import { compose, createStore, applyMiddleware } from 'redux';
-import { createStore } from 'redux';
+import { compose, createStore, applyMiddleware } from 'redux';
+// import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { View } from 'react-native';
-// import createLogger from 'redux-logger';
+import { createLogger } from 'redux-logger';
 // import createSagaMiddleware from 'redux-saga';
 import Nav from '../components/Nav';
 import UserInfo from '../components/UserInfo';
@@ -12,14 +12,15 @@ import reducer from '../reducers';
 // import sagas from '../sagas';
 
 // const sagaMiddleware = createSagaMiddleware();
-// const logger = createLogger();
+const logger = createLogger();
 // const middlewares = [sagaMiddleware, logger];
 // const middlewares = [logger];
-// const store = createStore(
-//     reducer,
-//     compose(applyMiddleware(...middlewares)),
-//   );
-const store = createStore(reducer);
+const middlewares = [];
+const store = createStore(
+  reducer,
+  compose(applyMiddleware(...middlewares)),
+);
+// const store = createStore(reducer);
 // sagaMiddleware.run(sagas);
 
 const App = () => (

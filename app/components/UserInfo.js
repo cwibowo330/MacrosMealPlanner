@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
-import { UPDATE_CALORIES,
+import { UPDATE_MACRO,
          UPDATE_DAYS,
          UPDATE_PROTEINS,
          UPDATE_FATS,
@@ -34,9 +34,16 @@ class UserInfo extends Component {
 
   onCaloriesChange(e) {
     console.log('this is onCaloriesChange');
+    // this.props.dispatch({
+    //   type:  UPDATE_MACRO,
+    //   macro: 'calories',
+    //   value: Number(e.target.value),
+    // });
+
     this.props.dispatch({
-      type:     UPDATE_CALORIES,
-      calories: Number(e.target.value),
+      type:  UPDATE_MACRO,
+      macro: 'calories',
+      value: Number(e.target.value),
     });
   }
   onDaysChange(e) {

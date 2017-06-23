@@ -3,6 +3,7 @@ export const UPDATE_DAYS = 'UPDATE_DAYS';
 export const UPDATE_PROTEINS = 'UPDATE_PROTEINS';
 export const UPDATE_FATS = 'UPDATE_FATS';
 export const UPDATE_CARBS = 'UPDATE_CARBS';
+export const UPDATE_MACRO = 'UPDATE_MACRO';
 export const DELETE_MACRO = 'DELETE_MACRO';
 
 
