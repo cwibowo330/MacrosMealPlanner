@@ -12,7 +12,7 @@ describe('macroToCals', () => {
       expect(amt).toEqual(100 / 9);
     });
   });
-  describe('given proteins or proteins', () => {
+  describe('given proteins or fats', () => {
     const amt = macroToCals('proteins', 100);
 
     it('returns the right amount', () => {
@@ -21,19 +21,19 @@ describe('macroToCals', () => {
   });
 });
 
-describe('macroTotal', () => {
-  describe('given protein macro entered', () => {
-    const value = macroTotal(50);
+// describe('macroTotal', () => {
+//   describe('given protein macro entered', () => {
+//     const value = macroTotal(50);
 
-    it('returns half the amount', () => {
-      expect(value).toEqual((100 - 50) / 2);
-    });
-  });
-});
+//     it('returns half the amount', () => {
+//       expect(value).toEqual((100 - 50) / 2);
+//     });
+//   });
+// });
 
 describe('reconcileMacros', () => {
   describe('given updated calories', () => {
-    const action = { type: 'calories', value: 1000 };
+    const action = { type: 'calories', value: 1200 };
     const state = {
       calories:     1500,
       proteins:     25,
@@ -44,13 +44,13 @@ describe('reconcileMacros', () => {
       carbGrams:    (1500 * 0.35) / 4,
     };
     const expectedState = {
-      calories:     1000,
+      calories:     1200,
       proteins:     25,
-      proteinGrams: (1000 * 0.25) / 4,
+      proteinGrams: (1200 * 0.25) / 4,
       fats:         35,
-      fatGrams:     (1000 * 0.35) / 9,
+      fatGrams:     (1200 * 0.35) / 9,
       carbs:        35,
-      carbGrams:    (1000 * 0.35) / 4,
+      carbGrams:    (1200 * 0.35) / 4,
     };
 
     const newState = reconcileMacros(action, state);
