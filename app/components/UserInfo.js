@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { UPDATE_MACRO,
-         UPDATE_DAYS,
-         UPDATE_PROTEINS,
-         UPDATE_FATS,
-         UPDATE_CARBS,
        } from '../actions';
 import StyledText from './StyledText';
 import LabeledInput from './LabeledInput';
@@ -34,11 +30,6 @@ class UserInfo extends Component {
 
   onCaloriesChange(e) {
     console.log('this is onCaloriesChange');
-    // this.props.dispatch({
-    //   type:  UPDATE_MACRO,
-    //   macro: 'calories',
-    //   value: Number(e.target.value),
-    // });
 
     this.props.dispatch({
       type:  UPDATE_MACRO,
@@ -49,29 +40,33 @@ class UserInfo extends Component {
   onDaysChange(e) {
     console.log('this is onDaysChange');
     this.props.dispatch({
-      type: UPDATE_DAYS,
-      days: Number(e.target.value),
+      type:  UPDATE_MACRO,
+      macro: 'days',
+      value: Number(e.target.value),
     });
   }
   onProteinChange(e) {
     console.log('this is onProteinChange');
     this.props.dispatch({
-      type:     UPDATE_PROTEINS,
-      proteins: Number(e.target.value),
+      type:  UPDATE_MACRO,
+      macro: 'proteins',
+      value: Number(e.target.value),
     });
   }
   onFatChange(e) {
     console.log('this is onFatChange');
     this.props.dispatch({
-      type: UPDATE_FATS,
-      fats: Number(e.target.value),
+      type:  UPDATE_MACRO,
+      macro: 'fats',
+      value: Number(e.target.value),
     });
   }
   onCarbChange(e) {
     console.log('this is onCarbChange');
     this.props.dispatch({
-      type:  UPDATE_CARBS,
-      carbs: Number(e.target.value),
+      type:  UPDATE_MACRO,
+      macro: 'carbs',
+      value: Number(e.target.value),
     });
   }
 
@@ -106,21 +101,21 @@ class UserInfo extends Component {
             value={String(this.props.macros.proteins)}
             name="proteinsPercent"
             textStyle="macrosInfoSubtitle"
-            title="protein 140"
+            title={String(this.props.macros.proteinGrams)}
             onChange={this.onProteinChange}
           />
           <LabeledInput
             value={String(this.props.macros.fats)}
             name="fatsPercent"
             textStyle="macrosInfoSubtitle"
-            title="fats 120"
+            title={String(this.props.macros.fatGrams)}
             onChange={this.onFatChange}
           />
           <LabeledInput
             value={String(this.props.macros.carbs)}
             name="carbsPercent"
             textStyle="macrosInfoSubtitle"
-            title="carbs 40"
+            title={String(this.props.macros.carbGrams)}
             onChange={this.onCarbChange}
           />
         </View>
@@ -131,22 +126,28 @@ class UserInfo extends Component {
 
 UserInfo.defaultProps = {
   macros: {
-    calories: 0,
-    days:     0,
-    proteins: 0,
-    fats:     0,
-    carbs:    0,
+    calories:      0,
+    days:          0,
+    proteins:      0,
+    proteinsGrams: 0,
+    fats:          0,
+    fatGrams:      0,
+    carbs:         0,
+    carbGrams:     0,
   },
 };
 
 UserInfo.propTypes = {
   dispatch: PropTypes.func.isRequired,
   macros:   PropTypes.shape({
-    calories: PropTypes.number,
-    days:     PropTypes.number,
-    proteins: PropTypes.number,
-    fats:     PropTypes.number,
-    carbs:    PropTypes.number,
+    calories:     PropTypes.number,
+    days:         PropTypes.number,
+    proteins:     PropTypes.number,
+    proteinGrams: PropTypes.number,
+    fats:         PropTypes.number,
+    fatGrams:     PropTypes.number,
+    carbs:        PropTypes.number,
+    carb:         PropTypes.number,
   }),
 };
 

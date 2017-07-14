@@ -1,5 +1,6 @@
 import {
   macroToCals,
+  macroTotal,
   reconcileMacros,
 } from '../../app/services/MacroService';
 
@@ -9,6 +10,23 @@ describe('macroToCals', () => {
 
     it('returns the right amount', () => {
       expect(amt).toEqual(100 / 9);
+    });
+  });
+  describe('given proteins or proteins', () => {
+    const amt = macroToCals('proteins', 100);
+
+    it('returns the right amount', () => {
+      expect(amt).toEqual(100 / 4);
+    });
+  });
+});
+
+describe('macroTotal', () => {
+  describe('given protein macro entered', () => {
+    const value = macroTotal(50);
+
+    it('returns half the amount', () => {
+      expect(value).toEqual((100 - 50) / 2);
     });
   });
 });

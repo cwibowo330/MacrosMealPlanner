@@ -10,14 +10,19 @@ export function getDailyRequired(cals, perc) {
   return (Number(cals) * Number(perc)) / 100;
 }
 
+export function macroTotal(value) {
+  return (100 - value) / 2;
+}
+
 export function reconcileMacros({ type, value }, state) {
   const copy = JSON.parse(JSON.stringify(state));
 
   copy[type] = value;
-
+  copy.fats = macroTotal(copy.proteins);
+  copy.carbs = macroTotal(copy.proteins);
   copy.proteinGrams = macroToCals('proteins', getDailyRequired(copy.calories, copy.proteins));
-  copy.fatGrams = (Number(copy.calories) * (Number(copy.fats) / 100)) / 9;
-  copy.carbGrams = (Number(copy.calories) * (Number(copy.carbs) / 100)) / 4;
+  copy.fatGrams = macroToCals('fats', getDailyRequired(copy.calories, copy.fats));
+  copy.carbGrams = macroToCals('carbs', getDailyRequired(copy.calories, copy.carbs));
 
   return copy;
   // return {
