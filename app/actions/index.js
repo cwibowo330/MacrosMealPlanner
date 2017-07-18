@@ -1,5 +1,7 @@
 export const UPDATE_MACRO = 'UPDATE_MACRO';
 
+export const UPDATE_USERSETTING = 'UPDATE_USERSETTING';
+
 
 
 // actions:

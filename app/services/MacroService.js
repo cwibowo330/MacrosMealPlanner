@@ -14,6 +14,32 @@ export function getDailyRequired(cals, perc) {
 //   return (100 - value) / 2;
 // }
 
+// function for adding groceries
+// export function addGroceries(state) {
+//   const macrosCopy = JSON.parse(JSON.stringify(state));
+//   const groceryList = macrosCopy.filter(arr => (arr){
+//    return arr[count] > 0; 
+//   });
+  
+// }
+
+// function for deleting groceries
+export function deleteGroceries(state) {
+  
+}
+
+
+// function for calculating if currentTotal macros from grocery, if count is more than 1 then add.
+
+
+
+// function for calculating if macros have been met
+export function metMacros(targetMacrosAmt, currentMacrosAmt){
+  // totalMacrosAmt = proteinGrams * days
+  // currentMacrosAmt = calculate total amount from groceries state
+   totalMarcosAmt - currentMacrosAmt / totalMarcosAmt; //equals percentage amount
+};
+
 export function reconcileMacros({ type, value }, state) {
   const copy = JSON.parse(JSON.stringify(state));
 
