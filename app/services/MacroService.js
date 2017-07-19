@@ -1,3 +1,43 @@
+// =================== CALCULATE GROCERIES FUNCTIONS ================== 
+export function addMacrosToGroceries(macros, groceriesState) {
+  // check if macrosState has a greater count than 1
+  const addToGroceries = macros.filter((macro) => {
+    return macro.count > 0;
+  });
+  // pushes counts greater than 1 into groceries state
+  const groceriesStateCopy = JSON.parse(JSON.stringify(groceriesState));
+  groceriesStateCopy.push(addToGroceries);
+}
+
+// function for adding groceries
+export function addGroceries(groceriesState, name) {
+  if (checkIfGroceryExist(name, state) === 'true') {
+    item.count += 1;
+  }
+
+  return item;
+}
+
+// function for deleting groceries
+export function deleteGroceries(groceriesState, name) {
+  if (checkIfGroceryExist(name, state) === 'true') {
+    item.count -= 1;
+  }
+
+  return item;
+}
+
+// check if grocery exists in groceryList 
+export function checkIfGroceryExist (name, groceriesState) {
+  groceriesState.filter((item) => {
+    if (item.name === name) {
+      return true;
+    }
+  });
+}
+
+
+// =================== CALCULATE USERSETTINGS FUNCTIONS ================== 
 export function macroToCals(type, amount) {
   if (type === 'fats') {
     return Number(amount) / 9;
@@ -9,29 +49,6 @@ export function macroToCals(type, amount) {
 export function getDailyRequired(cals, perc) {
   return (Number(cals) * Number(perc)) / 100;
 }
-
-// export function macroTotal(value) {
-//   return (100 - value) / 2;
-// }
-
-// function for adding groceries
-// export function addGroceries(state) {
-//   const macrosCopy = JSON.parse(JSON.stringify(state));
-//   const groceryList = macrosCopy.filter(arr => (arr){
-//    return arr[count] > 0; 
-//   });
-  
-// }
-
-// function for deleting groceries
-export function deleteGroceries(state) {
-  
-}
-
-
-// function for calculating if currentTotal macros from grocery, if count is more than 1 then add.
-
-
 
 // function for calculating if macros have been met
 export function metMacros(targetMacrosAmt, currentMacrosAmt){
