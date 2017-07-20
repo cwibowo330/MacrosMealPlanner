@@ -11,7 +11,7 @@ export function addMacrosToGroceries(macros, groceriesState) {
 
 // function for adding groceries
 export function addGroceries(groceriesState, name) {
-  if (checkIfGroceryExist(name, state) === 'true') {
+  if (checkIfItemExist(name, groceriesState) === 'true') {
     item.count += 1;
   }
 
@@ -20,18 +20,17 @@ export function addGroceries(groceriesState, name) {
 
 // function for deleting groceries
 export function deleteGroceries(groceriesState, name) {
-  if (checkIfGroceryExist(name, state) === 'true') {
-    item.count -= 1;
+  if (checkIfItemExist(name, groceriesState) === 'true') {
+    name.count -= 1;
+    return name;
   }
-
-  return item;
 }
 
-// check if grocery exists in groceryList 
-export function checkIfGroceryExist (name, groceriesState) {
-  groceriesState.filter((item) => {
+// check if grocery exists in groceryList
+export function checkIfItemExist(name, state) {
+  state.filter((item) => {
     if (item.name === name) {
-      return true;
+      return item;
     }
   });
 }
@@ -50,22 +49,32 @@ export function getDailyRequired(cals, perc) {
   return (Number(cals) * Number(perc)) / 100;
 }
 
+// calculate total target macros
+export function calculateTargetMacros(grams, days) {
+  return grams * days;
+}
+
 // function for calculating if macros have been met
-export function metMacros(targetMacrosAmt, currentMacrosAmt){
-  // totalMacrosAmt = proteinGrams * days
-  // currentMacrosAmt = calculate total amount from groceries state
-   totalMarcosAmt - currentMacrosAmt / totalMarcosAmt; //equals percentage amount
-};
+export function metMacros(currentMacrosAmt, totalMarcosAmt) {
+  return (currentMacrosAmt * 100) / totalMarcosAmt;
+}
 
 export function reconcileMacros({ type, value }, state) {
   const copy = JSON.parse(JSON.stringify(state));
 
   copy[type] = value;
+  copy.days = copy.days;
   copy.fats = copy.fats;
   copy.carbs = copy.carbs;
-  copy.proteinGrams = macroToCals('proteins', getDailyRequired(copy.calories, copy.proteins));
-  copy.fatGrams = macroToCals('fats', getDailyRequired(copy.calories, copy.fats));
-  copy.carbGrams = macroToCals('carbs', getDailyRequired(copy.calories, copy.carbs));
+  copy.proteinGrams = macroToCals('proteins',
+                      getDailyRequired(copy.calories, copy.proteins));
+  copy.proteinTotal = calculateTargetMacros(copy.proteinGrams, copy.days);
+  copy.fatGrams = macroToCals('fats',
+                  getDailyRequired(copy.calories, copy.fats));
+  copy.fatTotal = calculateTargetMacros(copy.fatGrams, copy.days);
+  copy.carbGrams = macroToCals('carbs',
+                   getDailyRequired(copy.calories, copy.carbs));
+  copy.carbTotal = calculateTargetMacros(copy.carbGrams, copy.days);
 
   return copy;
   // return {
