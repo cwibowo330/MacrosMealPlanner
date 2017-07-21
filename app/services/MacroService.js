@@ -1,5 +1,5 @@
 // =================== CALCULATE GROCERIES FUNCTIONS ================== 
-export function addMacrosToGroceries(macros, groceriesState) {
+export function pushMacrosToGroceries(macros, groceriesState) {
   // check if macrosState has a greater count than 1
   const addToGroceries = macros.filter((macro) => {
     return macro.count > 0;
@@ -9,21 +9,22 @@ export function addMacrosToGroceries(macros, groceriesState) {
   groceriesStateCopy.push(addToGroceries);
 }
 
-// function for adding groceries
-export function addGroceries(groceriesState, name) {
-  if (checkIfItemExist(name, groceriesState) === 'true') {
-    item.count += 1;
-  }
-
-  return item;
-}
-
-// function for deleting groceries
-export function deleteGroceries(groceriesState, name) {
-  if (checkIfItemExist(name, groceriesState) === 'true') {
+// function for adding macro count
+export function addMacroCount(macrosState, name) {
+  if (checkIfItemExist(name, macrosState) === 'true') {
     name.count -= 1;
     return name;
   }
+  // should update grocery state after
+}
+
+// function for subtracting macro count
+export function substractMacroCount(macrosState, name) {
+  if (checkIfItemExist(name, macrosState) === 'true') {
+    name.count -= 1;
+    return name;
+  }
+  // should update grocery state after
 }
 
 // check if grocery exists in groceryList
