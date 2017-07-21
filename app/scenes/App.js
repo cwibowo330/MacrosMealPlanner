@@ -8,14 +8,15 @@ import { createLogger } from 'redux-logger';
 import Nav from '../components/Nav';
 import UserInfo from '../components/UserInfo';
 import MacrosModule from '../components/MacrosModule';
+import Demo from '../components/Demo';
 import reducer from '../reducers';
 // import sagas from '../sagas';
 
 // const sagaMiddleware = createSagaMiddleware();
 const logger = createLogger();
 // const middlewares = [sagaMiddleware, logger];
-// const middlewares = [logger];
-const middlewares = [];
+const middlewares = [logger];
+// const middlewares = [];
 const store = createStore(
   reducer,
   compose(applyMiddleware(...middlewares)),
@@ -26,6 +27,7 @@ const store = createStore(
 const App = () => (
   <Provider store={store}>
     <View>
+      <Demo userId={1} />
       <Nav />
       <UserInfo />
       <MacrosModule title="proteins" />
