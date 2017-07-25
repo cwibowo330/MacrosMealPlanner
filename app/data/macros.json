@@ -1,0 +1,88 @@
+{
+  "proteins" : [
+    {   
+      "id": 1,
+      "name":   "Sirloin Steak",
+      "image":  "http://www.omahasteaks.com/gifs/recipes/390x250/ts022.jpg",
+      "amt":    "4 oz",
+      "pgrams":  20,
+      "fgrams":  14,
+      "cgrams":  0,
+      "count": 0
+    },
+    {   
+      "id": 2,
+      "name":   "NY Strip Steak",
+      "image":  "http://cdn.snakeriverfarms.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/k/akb_stk_nys_p01_35823_sf2.jpg",
+      "amt":    "5 oz",
+      "pgrams":  0,
+      "fgrams":  40,
+      "cgrams":  0,
+      "count": 0
+    },
+    {   
+      "id": 3,
+      "name":   "Pork Chop",
+      "image":  "https://static01.nyt.com/images/2014/09/03/dining/porchetta/porchetta-superJumbo-v2.jpgchick",
+      "amt":    "8 oz",
+      "pgrams":  52,
+      "fgrams":  31,
+      "cgrams":  0,
+      "count": 0
+    },
+    {   
+      "id": 4,
+      "name":   "Chicken Breast",
+      "image":  "http://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/1/5/2/KC0808H_Goat-Cheese-and-Herb-Stuffed-Chicken-Breast_s4x3.jpg.rend.hgtvcom.196.147.suffix/1493057955486.jpeg",
+      "amt":    "3 oz",
+      "pgrams":  27,
+      "fgrams":  5,
+      "cgrams":  0,
+      "count": 0
+    }
+  ],
+  "fats": [
+    {   
+      "id": 5,
+      "name":   "Avocado",
+      "image":  "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocado-sliced-in-half.jpg",
+      "amt":    "1 cup",
+      "pgrams":  3,
+      "fgrams":  21,
+      "cgrams":  12,
+      "count": 0
+    },
+    {   
+      "id": 6,
+      "name":   "Olive Oil",
+      "image":  "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocado-sliced-in-half.jpg",
+      "amt":    "1 cup",
+      "pgrams":  40,
+      "fgrams":  1.5,
+      "cgrams":  0,
+      "count":   0
+    }
+  ],  
+  "carbs": [
+    {   
+      "id": 7,
+      "name":   "bread",
+      "image":  "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocado-sliced-in-half.jpg",
+      "amt":    "1 cup",
+      "pgrams":  3,
+      "fgrams":  21,
+      "cgrams":  12,
+      "count": 0
+    },
+    {   
+      "id": 8,
+      "name":   "rice",
+      "image":  "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocado-sliced-in-half.jpg",
+      "amt":    "1 cup",
+      "pgrams":  40,
+      "fgrams":  1.5,
+      "cgrams":  0,
+      "count":   0
+    }
+  ]
+}

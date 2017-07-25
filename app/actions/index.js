@@ -3,6 +3,7 @@ export const UPDATE_MACRO = 'UPDATE_MACRO';
 export const UPDATE_USERSETTING = 'UPDATE_USERSETTING';
 
 // export const LOAD_USER = 'LOAD_USER';
+export const MACROS_LOADED = 'MACROS_LOADED';
 export const USER_LOADED = 'USER_LOADED';
 export const USER_UPDATED = 'USER_UPDATED';
 

@@ -9,6 +9,7 @@ import Nav from '../components/Nav';
 import UserInfo from '../components/UserInfo';
 import MacrosModule from '../components/MacrosModule';
 import Demo from '../components/Demo';
+import MacrosTest from '../components/MacrosTest';
 import reducer from '../reducers';
 // import sagas from '../sagas';
 
@@ -28,6 +29,7 @@ const App = () => (
   <Provider store={store}>
     <View>
       <Demo userId={1} />
+      <MacrosTest />
       <Nav />
       <UserInfo />
       <MacrosModule title="proteins" />
