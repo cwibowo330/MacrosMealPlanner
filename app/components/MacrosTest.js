@@ -15,7 +15,7 @@ class MacrosTest extends Component {
   componentDidMount() {
     this.props.dispatch({
       type:    MACROS_LOADED,
-      payload: JSON.stringify(macrosData),
+      payload: macrosData,
     });
   }
 
