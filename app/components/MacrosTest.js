@@ -17,41 +17,51 @@ class MacrosTest extends Component {
       type:    MACROS_LOADED,
       payload: JSON.stringify(macrosData),
     });
-    console.log(`macrosData INFO:::::::${JSON.stringify(macrosData)}`);
   }
 
-  // onPress() {
-  //   this.props.dispatch({
-  //     type:    USER_UPDATED,
-  //     payload: {
-  //       userId:     this.props.user.userId,
-  //       attributes: { count: this.props.user.count + 1 },
-  //     },
-  //   });
-  // }
-
   render() {
+    // shows macros object
+    console.log(`MACROS NOT SHOWING:::::${this.props.macros}`);
+
+    // shows Object object
+    console.log(`MACROS SHOWING:::::${JSON.stringify(this.props.macros)}`);
+
+
     return (
       <View>
         <Text>
           macros loading test
         </Text>
-        {
-            Object.keys(this.props.macros)
-              .map((key, index) =>
-                <Text key={key}>{this.props.macros[key][index].name}</Text>)
-         }
       </View>
+      // {
+      //   // grabs each item in key
+      //   Object.keys(this.props.macros)
+      //   .map((key) =>
+      //     console.log(this.props.macros[key]));
+
+      //   // console logs every object
+      //   Object.keys(this.props.macros)
+      //     .map(key => {
+      //       this.props.macros[key].map( index => console.log(index))
+      //     })
+
+      //   // specifies macro and narrows down with name
+      //   Object.keys(macros.proteins)
+      //     .map(key => {
+      //       console.log(this.props.macros.proteins[key].name)
+      //     })
+
+      //   // specifies macro using .map() instead
+      //   this.props.macros.proteins.map(index => {
+      //     console.log(index)
+      //   })
+      // }
     );
   }
+
 }
 
 function mapStateToProps(state) {
-  // if the next two lines were to be commonly used across different components,
-  // they could be moved into a (for example) UserService.getUser function
-  // const user = getUser(ownProps.userId);
-
-  // const macros = ownProps;
   const macros = state.macros ? state.macros : null;
 
   return { macros };
