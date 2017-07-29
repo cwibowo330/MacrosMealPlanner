@@ -20,15 +20,17 @@ class MacrosTest extends Component {
   }
 
   render() {
-    console.log(`MACROS NOT SHOWING:::::${this.props.macros}`);
-
-    console.log(`MACROS SHOWING:::::${JSON.stringify(this.props.macros)}`);
-
+    console.log('PROTEINS::::');
+    console.log(this.props.macros.proteins);
+    console.log('CARBS:::::');
+    console.log(this.props.macros.carbs);
+    console.log('FATS::::');
+    console.log(this.props.macros.fats);
 
     return (
       <View>
         <Text>
-          macros loading test
+          test
         </Text>
       </View>
       // {
@@ -60,13 +62,15 @@ class MacrosTest extends Component {
 }
 
 function mapStateToProps(state) {
-  const macros = state.macros ? state.macros : null;
-
-  return { macros };
+  return { macros: state.macros };
 }
 
 MacrosTest.defaultProps = {
-  macros: {},
+  macros: {
+    proteins: [],
+    fats:     [],
+    carbs:    [],
+  },
 };
 
 MacrosTest.propTypes = {
