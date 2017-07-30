@@ -19,43 +19,34 @@ class MacrosTest extends Component {
     });
   }
 
+
   render() {
+    console.log('ALLMACROS::::');
+    console.log(this.props.macros);
+
     console.log('PROTEINS::::');
-    console.log(this.props.macros.proteins);
+    const proteinsData = this.props.macros.proteins;
+
+    console.log(proteinsData);
+
     console.log('CARBS:::::');
-    console.log(this.props.macros.carbs);
+    const carbsData = this.props.macros.carbs;
+
+    console.log(carbsData);
+
     console.log('FATS::::');
-    console.log(this.props.macros.fats);
+    const fatsData = this.props.macros.fats;
+
+    console.log(fatsData);
+
+    const fatsArray = Object.keys(fatsData).map(k => fatsData[k]);
+
+    // console.log(fatsArray);
+
+    // fatsArray.map(i => console.log(fatsArray[i].name));
 
     return (
-      <View>
-        <Text>
-          test
-        </Text>
-      </View>
-      // {
-      //   // grabs each item in key
-      //   Object.keys(this.props.macros)
-      //   .map((key) =>
-      //     console.log(this.props.macros[key]));
-
-      //   // console logs every object
-      //   Object.keys(this.props.macros)
-      //     .map(key => {
-      //       this.props.macros[key].map( index => console.log(index))
-      //     })
-
-      //   // specifies macro and narrows down with name
-      //   Object.keys(macros.proteins)
-      //     .map(key => {
-      //       console.log(this.props.macros.proteins[key].name)
-      //     })
-
-      //   // specifies macro using .map() instead
-      //   this.props.macros.proteins.map(index => {
-      //     console.log(index)
-      //   })
-      // }
+      <View />
     );
   }
 
@@ -66,11 +57,7 @@ function mapStateToProps(state) {
 }
 
 MacrosTest.defaultProps = {
-  macros: {
-    proteins: [],
-    fats:     [],
-    carbs:    [],
-  },
+  macros: {},
 };
 
 MacrosTest.propTypes = {
