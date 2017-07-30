@@ -39,7 +39,7 @@ class MacrosTest extends Component {
 
     console.log(fatsData);
 
-    const fatsArray = Object.keys(fatsData).map(k => fatsData[k]);
+    // const fatsArray = Object.keys(fatsData).map(k => fatsData[k]);
 
     // console.log(fatsArray);
 
