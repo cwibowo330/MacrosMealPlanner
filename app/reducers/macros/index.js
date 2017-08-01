@@ -16,7 +16,7 @@ export default function macros(state = {}, action) {
     }
   */
   if (action.type === 'MACROS_LOADED') {
-    copy[action.payload] = action.payload;
+    copy.macros = action.payload;
   }
 
   /*

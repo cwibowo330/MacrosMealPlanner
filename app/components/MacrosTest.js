@@ -20,9 +20,10 @@ class MacrosTest extends Component {
   }
 
   render() {
-    console.log(`MACROS NOT SHOWING:::::${this.props.macros}`);
+    // console.log(`MACROS NOT SHOWING:::::${this.props.macros}`);
+    // console.log(`MACROS SHOWING:::::${JSON.stringify(this.props.macros)}`);
 
-    console.log(`MACROS SHOWING:::::${JSON.stringify(this.props.macros)}`);
+    console.log('MACROS', this.props.macros);
 
 
     return (
