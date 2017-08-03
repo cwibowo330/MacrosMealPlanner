@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+import StyledText from './StyledText';
 import { MACROS_LOADED } from '../actions';
 import macrosData from '../data/macros.json';
 
 class MacrosTest extends Component {
-  // constructor() {
-  //   super();
 
-  //   this.onPress = this.onPress.bind(this);
-  // }
-
-  componentDidMount() {
-    this.props.dispatch({
+  constructor(props) {
+    super(props);
+    props.dispatch({
       type:    MACROS_LOADED,
       payload: macrosData,
     });
@@ -23,22 +20,18 @@ class MacrosTest extends Component {
   render() {
     console.log('ALLMACROS::::');
     console.log(this.props.macros);
-
     console.log('PROTEINS::::');
     const proteinsData = this.props.macros.proteins;
 
     console.log(proteinsData);
-
+    console.log(proteinsData[0]);
     console.log('CARBS:::::');
-    const carbsData = this.props.macros.carbs;
 
-    console.log(carbsData);
+    const names = Object.keys(proteinsData)
+                  .map(key =>
+                    <StyledText>{proteinsData[key].name}</StyledText>);
 
-    console.log('FATS::::');
-    const fatsData = this.props.macros.fats;
-
-    console.log(fatsData);
-
+    console.log(names);
     // const fatsArray = Object.keys(fatsData).map(k => fatsData[k]);
 
     // console.log(fatsArray);
@@ -46,7 +39,9 @@ class MacrosTest extends Component {
     // fatsArray.map(i => console.log(fatsArray[i].name));
 
     return (
-      <View />
+      <View>
+        {names}
+      </View>
     );
   }
 
@@ -56,9 +51,6 @@ function mapStateToProps(state) {
   return { macros: state.macros };
 }
 
-MacrosTest.defaultProps = {
-  macros: {},
-};
 
 MacrosTest.propTypes = {
   dispatch: PropTypes.func.isRequired,

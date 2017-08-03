@@ -1,7 +1,12 @@
 import { cloneDeep } from 'lodash';
+import macrosData from '../../data/macros.json';
 
-export default function macros(state = {}, action) {
+const initialState = macrosData;
+
+export default function macros(state = initialState, action) {
   const copy = cloneDeep(state);
+
+  console.log('REDUCERINITIALSTATE', copy);
 
   console.log('action', action);
   /*
@@ -16,7 +21,7 @@ export default function macros(state = {}, action) {
     }
   */
   if (action.type === 'MACROS_LOADED') {
-    copy.macros = action.payload;
+    return action.payload;
   }
 
   /*
