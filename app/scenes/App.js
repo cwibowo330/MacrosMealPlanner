@@ -5,11 +5,10 @@ import { Provider } from 'react-redux';
 import { View } from 'react-native';
 import { createLogger } from 'redux-logger';
 // import createSagaMiddleware from 'redux-saga';
-import Nav from '../components/Nav';
-import UserInfo from '../components/UserInfo';
-import MacrosModule from '../components/MacrosModule';
+import Nav from '../components/Nav/Nav';
+import UserInfo from '../components/UserInfo/UserInfo';
+import MacrosWrapper from '../components/Macros/MacrosWrapper';
 import Demo from '../components/Demo';
-import MacrosTest from '../components/MacrosTest';
 import reducer from '../reducers';
 // import sagas from '../sagas';
 
@@ -29,12 +28,9 @@ const App = () => (
   <Provider store={store}>
     <View>
       <Demo userId={1} />
-      <MacrosTest />
       <Nav />
       <UserInfo />
-      <MacrosModule title="proteins" />
-      <MacrosModule title="fats" />
-      <MacrosModule title="carbs" />
+      <MacrosWrapper />
     </View>
   </Provider>
 );

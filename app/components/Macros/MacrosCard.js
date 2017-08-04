@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
-import Colors from './Colors';
-import StyledText from './StyledText';
+import Colors from '../Colors';
+import StyledText from '../StyledText';
 
 const cardStyles = StyleSheet.create({
   info: {

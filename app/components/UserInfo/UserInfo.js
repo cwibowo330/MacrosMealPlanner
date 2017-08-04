@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { UPDATE_USERSETTING,
-       } from '../actions';
-import StyledText from './StyledText';
-import LabeledInput from './LabeledInput';
+       } from '../../actions';
+import StyledText from '../StyledText';
+import LabeledInput from '../LabeledInput';
 
 const userInfoStyles = StyleSheet.create({
   flexWrap: {
