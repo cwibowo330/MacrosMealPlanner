@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { View , Image} from 'react-native';
-import StyledText from '../StyledText';
+import StyledText from '../_styles/StyledText';
 import { MACROS_LOADED } from '../../actions';
 import macrosData from '../../data/macros.json';
 

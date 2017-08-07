@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Colors from '../Colors';
-import StyledText from '../StyledText';
+import Colors from '../_styles/Colors';
+import StyledText from '../_styles/StyledText';
 
 // https://facebook.github.io/react-native/releases/0.45/docs/flexbox.html
 const navStyles = StyleSheet.create({

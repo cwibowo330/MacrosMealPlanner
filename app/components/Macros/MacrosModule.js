@@ -1,56 +1,55 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Image } from 'react-native';
-import StyledText from '../StyledText';
-import Colors from '../Colors';
+import { View, Image, StyleSheet } from 'react-native';
+import StyledText from '../_styles/StyledText';
+import Colors from '../_styles/Colors';
 
-// const cardStyles = StyleSheet.create({
-//   info: {
-//     backgroundColor: Colors.red,
-//     width:           50,
-//     height:          55,
-//     position:        'absolute',
-//     top:             10,
-//     right:           0,
-//     zIndex:          10,
-//   },
-//   image: {
-//     width:     200,
-//     height:    200,
-//     marginTop: 10,
-//   },
-// });
+const cardStyles = StyleSheet.create({
+  info: {
+    backgroundColor: Colors.grey,
+    width:           60,
+    height:          55,
+    position:        'absolute',
+    top:             0,
+    right:           0,
+    zIndex:          10,
+    color:           Colors.white,
+  },
+  image: {
+    width:  200,
+    height: 200,
+  },
+});
 
 class MacrosModule extends React.Component {
   constructor(props) {
     super(props);
-    console.log('MACROSMODULE::::', this.props);
-    // Object.keys(this.props.data).map(k => console.log(this.props.data[k].name));
+    // console.log('MACROSMODULE::::', this.props);
   }
   render() {
-    // const macroCards = Object.keys(this.props.data)
-    //   .map(key =>
-    //     <View>
-    //     <Image source={{uri: this.props.data[key].image}} style= {{ height:200, width: 200 }}/>
-    //     <StyledText>{this.props.data[key].name}</StyledText>
-    //     </View>);
     const macroCards = Object.keys(this.props.data)
       .map(key =>
         <View>
-            <View>
-            <StyledText type="macroInfo">P: {this.props.data[key].pgrams}</StyledText>
-            <StyledText type="macroInfo">F: {this.props.data[key].fgrams}</StyledText>
-            <StyledText type="macroInfo">C: {this.props.data[key].cgrams}</StyledText>
-            </View>
-            <Image
-            source={{uri: this.props.data[key].image}} style= {{ height:200, width: 200 }}
-            />
-            <StyledText type="macroDesc">{this.props.data[key].name} - {this.props.data[key].amt}</StyledText>
-            <View>
+          <View style={cardStyles.info}>
+            <StyledText type="macroInfo"> P: {this.props.data[key].pgrams}</StyledText>
+            <StyledText type="macroInfo"> F: {this.props.data[key].fgrams}</StyledText>
+            <StyledText type="macroInfo"> C: {this.props.data[key].cgrams}</StyledText>
+          </View>
+          <Image
+            style={cardStyles.image}
+            source={{ uri: this.props.data[key].image }}
+          />
+          <StyledText type="macroDesc">{this.props.data[key].name} - {this.props.data[key].amt}</StyledText>
+          <View style={{
+            display:        'flex',
+            flexWrap:       'wrap',
+            flexDirection:  'row',
+            justifyContent: 'center',
+          }}>
             <StyledText type="count">-</StyledText>
             <StyledText type="countNum">{this.props.data[key].count}</StyledText>
             <StyledText type="count">+</StyledText>
-            </View>
+          </View>
         </View>);
 
     return (

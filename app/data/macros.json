@@ -23,7 +23,7 @@
     {   
       "id": 3,
       "name":   "Pork Chop",
-      "image":  "https://static01.nyt.com/images/2014/09/03/dining/porchetta/porchetta-superJumbo-v2.jpgchick",
+      "image":  "https://thumb9.shutterstock.com/display_pic_with_logo/991265/315915782/stock-photo-pork-chop-with-vegetable-in-plate-315915782.jpg",
       "amt":    "8 oz",
       "pgrams":  52,
       "fgrams":  31,
@@ -45,7 +45,7 @@
     {   
       "id": 5,
       "name":   "Avocado",
-      "image":  "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocado-sliced-in-half.jpg",
+      "image":  "https://avocadosfrommexico.com/wp-content/uploads/2016/11/hmaimg2.png",
       "amt":    "1 cup",
       "pgrams":  3,
       "fgrams":  21,
@@ -55,7 +55,27 @@
     {   
       "id": 6,
       "name":   "Olive Oil",
-      "image":  "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocado-sliced-in-half.jpg",
+      "image":  "https://content.naturallycurly.com/wp-content/uploads/2014/05/OLIVE-oil-for-hair-650x365.jpg",
+      "amt":    "1 cup",
+      "pgrams":  40,
+      "fgrams":  1.5,
+      "cgrams":  0,
+      "count":   0
+    },
+    {   
+      "id": 7,
+      "name":   "Butter",
+      "image":  "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/butter0117.jpg?itok=oGntvkbO",
+      "amt":    "1 cup",
+      "pgrams":  40,
+      "fgrams":  1.5,
+      "cgrams":  0,
+      "count":   0
+    },
+    {   
+      "id": 8,
+      "name":   "Bacon",
+      "image":  "https://sites.psu.edu/siowfa16/files/2016/10/Bacon-1u6mjcu.jpg",
       "amt":    "1 cup",
       "pgrams":  40,
       "fgrams":  1.5,
@@ -65,9 +85,9 @@
   ],  
   "carbs": [
     {   
-      "id": 7,
+      "id": 9,
       "name":   "bread",
-      "image":  "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocado-sliced-in-half.jpg",
+      "image":  "https://static01.nyt.com/images/2017/02/16/dining/16COOKING-NOKNEADBREAD1/16COOKING-NOKNEADBREAD1-videoSixteenByNineJumbo1600.jpg",
       "amt":    "1 cup",
       "pgrams":  3,
       "fgrams":  21,
@@ -75,9 +95,29 @@
       "count": 0
     },
     {   
-      "id": 8,
+      "id": 10,
       "name":   "rice",
-      "image":  "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocado-sliced-in-half.jpg",
+      "image":  "http://www.simplyrecipes.com/wp-content/uploads/2017/05/2017-05-22-HT-Rice-19.jpg",
+      "amt":    "1 cup",
+      "pgrams":  40,
+      "fgrams":  1.5,
+      "cgrams":  0,
+      "count":   0
+    },
+    {   
+      "id": 11,
+      "name":   "pasta",
+      "image":  "http://www.seriouseats.com/recipes/assets_c/2016/08/20160827-cherry-tomato-pasta-13-thumb-1500xauto-433876.jpg",
+      "amt":    "1 cup",
+      "pgrams":  40,
+      "fgrams":  1.5,
+      "cgrams":  0,
+      "count":   0
+    },
+    {   
+      "id": 12,
+      "name":   "noodles",
+      "image":  "https://www.gimmesomeoven.com/wp-content/uploads/2009/10/sesame-noodles.jpg",
       "amt":    "1 cup",
       "pgrams":  40,
       "fgrams":  1.5,

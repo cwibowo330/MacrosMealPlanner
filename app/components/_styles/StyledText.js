@@ -49,25 +49,12 @@ const styles = StyleSheet.create({
   macrosTitle: {
     ...baseStyle,
     marginTop:      20,
+    marginBottom:   10,
     fontSize:       24,
     fontWeight:     '600',
     display:        'flex',
     flex:           1,
     justifyContent: 'center',
-  },
-  count: {
-    borderRadius:    13,
-    height:          26,
-    width:           26,
-    backgroundColor: Colors.grey,
-    color:           Colors.white,
-    textAlign:       'center',
-    fontSize:        21,
-  },
-  countNum: {
-    paddingLeft:  10,
-    paddingRight: 10,
-    paddingTop:   5,
   },
   macroDesc: {
     display:       'block',
@@ -77,8 +64,26 @@ const styles = StyleSheet.create({
     textAlign:     'center',
   },
   macroInfo: {
-    paddingTop:   3,
-    paddingRight: 3,
+    paddingTop:  3,
+    paddingLeft: 3,
+    fontSize:    12,
+  },
+  count: {
+    borderRadius:    13,
+    display:         'inline-block',
+    height:          26,
+    width:           26,
+    backgroundColor: Colors.grey,
+    color:           Colors.white,
+    textAlign:       'center',
+    paddingTop:      -5,
+    fontSize:        20,
+  },
+  countNum: {
+    paddingLeft:  10,
+    paddingRight: 10,
+    paddingTop:   5,
+    display:      'inline-block',
   },
 });
 
